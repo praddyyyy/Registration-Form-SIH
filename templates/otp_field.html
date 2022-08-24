@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OTP Verification</title>
+    <link href="../static/css/otp_field.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1 style="color: black;">Enter OTP {{val}}</h1>
+    <form method="POST" name="otp_form">
+      <div class="otp-field">
+        <input type="text" maxlength="1" />
+        <input type="text" maxlength="1" />
+        <input type="text" maxlength="1" />
+        <input type="text" maxlength="1" />
+      </div>
+      <div>
+        <input type="submit" value="Request OTP">
+        <input type="submit" value="Submit OTP">
+      </div>
+    </form>
+
+    <script src="../static/js/otp_field.js"></script>
+  </body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+        <script>
+      /* function ValidateAdhaar(inputText) {
+        var adhaarformat = /^[0-9]+$/;
+        if (inputText.value.match(adhaarformat)) {
+          alert("Valid Adhaar Number!");
+          document.form1.adhaar.focus();
+          return true;
+        } else {
+          alert("You have entered an invalid aadhar number!");
+          document.form1.adhaar.focus();
+          return false;
+        }
+      } */
+    </script>
+
+    <!-- Title Page-->
+    <title>Adhaar Verification</title>
+
+    <!-- Icons font CSS-->
+    <!-- C:\Paari1263\SIH\Reg_Form\static\vendor-->
+    <link
+      href="{{ url_for('static', filename='vendor/mdi-font/css/material-design-iconic-font.min.css') }}"
+      rel="stylesheet"
+      media="all"
+    />
+    <link
+      href="{{ url_for('static', filename='vendor/font-awesome-4.7/css/font-awesome.min.css') }}"
+      rel="stylesheet"
+      media="all"
+    />
+    <!-- Font special for pages-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS-->
+    <link
+    href="{{ url_for('static', filename='vendor/select2/select2.min.css') }}"
+      rel="stylesheet"
+      media="all"
+    />
+
+    <!-- Main CSS-->
+    <link href="{{ url_for('static', filename='css/reg_form.css') }}" rel="stylesheet" media="all" />
+  </head>
+
+  <body onload='document.form1.adhaar.focus()'>
+    <div class="loader-wrapper">
+      <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+    <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+      <div class="wrapper wrapper--w680">
+        <div class="card card-4">
+          <div class="card-body">
+            <h2 class="title">OTP Verification</h2>
+            <form method="POST" name="form1" autocomplete="off">
+              <div class="row row-space">
+                <div class="col-2">
+                  <div class="input-group">
+                    <label class="label">Enter OTP</label>
+                    <input
+                      class="input--style-4"
+                      type="text"
+                      id="otp"
+                      name="otp"
+                      maxlength = "4"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="p-t-15">
+                <button class="btn btn--radius-2 btn--blue" type="submit" onclick="ValidateAdhaar(document.form1.adhaar)">
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/select2/select2.min.js') }}"></script>
+
+    <!-- Main JS-->
+    <script>
+        $(window).on("load",function(){
+          $(".loader-wrapper").fadeOut("slow");
+        });
+    </script>
+        <script src="{{ url_for('static', filename='js/global.js') }}"></script>
+
+  </body>
+</html>
+

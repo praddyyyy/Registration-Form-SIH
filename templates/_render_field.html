@@ -1,0 +1,11 @@
+{% macro render_field(field) %}
+<div class="input-group">
+  <label class="label" for="{{ field.name }}">{{ field.label.text }}</label>
+  {{ field(class_='input--style-4', **kwargs)|safe }}
+  <ul>
+    {% for error in field.errors %}
+        <li style="color:red;">{{ error }}</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endmacro %}
